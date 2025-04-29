@@ -1,0 +1,29 @@
+# netlify.toml
+
+# Settings for the build environment
+[build]
+  # Command to build the site
+  command = "pnpm build"
+  
+  # Directory containing the built site (relative to the root)
+  # For Next.js, this is typically the .next directory
+  publish = ".next"
+
+# Settings for Netlify Functions (if using Next.js API routes or server-side rendering)
+# Netlify automatically handles Next.js API routes and SSR via its Next.js Runtime.
+# The functions directory setting might not be strictly necessary but can be specified.
+[functions]
+  # Directory for serverless functions (handled by Next.js Runtime)
+  # directory = ".netlify/functions-internal"
+
+# Redirects and rewrites (optional, can be useful for SPAs or specific routing)
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
+
+# Environment variables should be set in the Netlify UI for security:
+# - NEXT_PUBLIC_SUPABASE_URL
+# - NEXT_PUBLIC_SUPABASE_ANON_KEY
+# Go to Site settings > Build & deploy > Environment > Environment variables.
+
